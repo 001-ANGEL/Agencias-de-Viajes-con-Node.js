@@ -7,7 +7,7 @@ import {
   tripPageDetails,
 } from "../controllers/paginasController.js";
 
-import { saveTestimonial } from "../controllers/testimonial.js";
+import { saveTestimonial } from "../controllers/testimonialController.js";
 
 const router = express.Router();
 

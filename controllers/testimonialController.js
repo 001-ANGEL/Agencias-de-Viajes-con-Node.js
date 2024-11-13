@@ -21,6 +21,10 @@ const saveTestimonial = async (req, res) => {
   }
 
   if (errors.length > 0) {
+
+    //Consultar testimoniales existentes
+    const testimoniales = await testimonial.findAll();
+    
     //Mostrar la vista cor errores
     res.render("testimoniales", {
       page: "Testimoniales",
@@ -28,6 +32,7 @@ const saveTestimonial = async (req, res) => {
       nombre,
       correo,
       mensaje,
+      testimoniales
     });
   } else {
     //Almacenarlo en la base de datos
