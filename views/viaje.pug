@@ -1,0 +1,39 @@
+extends ./layout/index
+
+block contenido
+  main.container.mt-5
+    .row
+      .col-md-5
+        img(src=`/img/destinos_${result.imagen}_ln.jpg`, alt="imagen de result", class="img-fluid")
+      .col-md-7
+        h1 #{result.titulo}
+
+        p
+          svg(xmlns='http://www.w3.org/2000/svg' x-bind:width='size' x-bind:height='size' viewbox='0 0 24 24' fill='none' width='24' height='24' stroke-width='2' stroke-linejoin='round' stroke-linecap='round' x-bind:stroke-width='stroke' stroke='currentColor')
+            path(d='M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z')
+            path(d='M16 3l0 4')
+            path(d='M8 3l0 4')
+            path(d='M4 11l16 0')
+            path(d='M8 15h2v2h-2z')
+          |#{result.fecha_ida} - #{result.fecha_vuelta}
+
+
+        p
+          svg(xmlns='http://www.w3.org/2000/svg' x-bind:width='size' x-bind:height='size' viewbox='0 0 24 24' fill='none' stroke='currentColor' x-bind:stroke-width='stroke' stroke-linecap='round' stroke-linejoin='round' width='24' height='24' stroke-width='2')
+            path(d='M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0')
+            path(d='M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 1 0 0 4h2a2 2 0 1 1 0 4h-2a2 2 0 0 1 -1.8 -1')
+            path(d='M12 7v10')
+          |#{result.precio} Dolares
+
+
+        p 
+          svg(xmlns='http://www.w3.org/2000/svg' x-bind:width='size' x-bind:height='size' viewbox='0 0 24 24' fill='none' width='24' height='24' stroke-width='2' stroke-linejoin='round' stroke-linecap='round' x-bind:stroke-width='stroke' stroke='currentColor')
+            path(d='M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0')
+            path(d='M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2')
+
+          |#{result.disponibles} Disponibles
+
+
+        p= result.descripcion
+
+
