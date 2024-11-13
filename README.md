@@ -30,7 +30,7 @@ La organización de archivos sigue el patrón MVC (Modelo, Vista, Controlador):
 
 ---Instalación
 Clona este repositorio:
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/001-ANGEL/Agencias-de-Viajes-con-Node.js/tree/main
 cd agencia-viajes
 
 ---Instala las dependencias:
